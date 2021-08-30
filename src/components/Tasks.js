@@ -1,9 +1,7 @@
-import React, { useState } from "react";
-import { initialState } from "../store/initialState";
+
 import Task from "./Task";
 
-function Tasks() {
-  const [tasks, setTasks] = useState(initialState);
+function Tasks({tasks}) {
   return (
     <div>
       {tasks.map((task) => (
