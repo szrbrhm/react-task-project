@@ -34,7 +34,7 @@ function CreateTask({ onCreate }) {
         </div>
         <div className="form-control">
           <label htmlFor="day">Day & Time</label>
-          <inp
+          <input
             id="day"
             name="day"
             type="text"

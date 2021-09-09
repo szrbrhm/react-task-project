@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import Button from './Button/Button';
 
 
-function Header({title}) {
+function Header({title, toggleShow, isTaskBarShowed }) {
     return (
         <header className="header">
             <h1>{title}</h1>
-            <Button color="purple" text="Show Create a Task Bar"/>
+            <Button color={isTaskBarShowed ? "steelblue" : "purple"} 
+            text={isTaskBarShowed ? "Hide Create a Task Bar" : "Show Create a Task Bar"} toggleShow={toggleShow}/>
             
         </header>
     )
