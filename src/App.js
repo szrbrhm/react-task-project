@@ -10,7 +10,11 @@ function App() {
 
   // Create a task
 
-  
+  const onCreate = (task) => {
+    const id = Date.now();
+    const newTask = {id, ...task}
+    setTasks((prevState) => [...prevState, newTask])
+  }
 
   // Delete Task
   const onDelete = (deletedItemId) => setTasks(tasks.filter((task) => task.id !== deletedItemId))
@@ -22,8 +26,8 @@ function App() {
   return (
     <div className="container">
      <Header title={"Task Tracker"}/>
-     <CreateTask/>
-     <Tasks tasks={tasks} onDelete={onDelete}/>
+     <CreateTask onCreate={onCreate}/>
+     <Tasks tasks={tasks} onDelete={onDelete} />
     </div>
   );
 }
