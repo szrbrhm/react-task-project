@@ -28,7 +28,7 @@ function CreateTask({ onCreate }) {
             type="text"
             placeholder="Enter a task name"
             // required
-            //   value={text}
+              value={text}
             onChange={handleTextChange}
           />
         </div>
@@ -40,7 +40,7 @@ function CreateTask({ onCreate }) {
             type="text"
             placeholder="Enter a day and time"
             // required
-            //   value={day}
+              value={day}
             onChange={handleDayChange}
           />
         </div>
